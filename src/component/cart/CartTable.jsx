@@ -100,7 +100,7 @@ export default function CartTable() {
                                         </button>
                                     </td>
                                     <td>
-                                        <img src={`http://localhost:9000/${item.main_image}`} alt={`${item.pname} 상품 이미지`} />
+                                        <img src={`http://3.36.132.223:9000/${item.main_image}`} alt={`${item.pname} 상품 이미지`} />
                                     </td>
                                     <td>{item.pname}</td>
                                     <td>

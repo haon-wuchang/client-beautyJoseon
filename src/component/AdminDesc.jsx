@@ -24,7 +24,7 @@ export default function AdminDesc() {
     
     const getFileName = (filesNames) => {
         setFnames(filesNames);
-        setPreview(`http://localhost:9000/${filesNames.uploadFileName}`);
+        setPreview(`http://3.36.132.223:9000/${filesNames.uploadFileName}`);
         setPreviewList(filesNames.uploadFileName);
     }
 
@@ -35,7 +35,7 @@ export default function AdminDesc() {
                 'source_file': fnames.sourceFileName
             });
 
-            axios.post('http://localhost:9000/uploads/dbDescUpload', formData)
+            axios.post('http://3.36.132.223:9000/uploads/dbDescUpload', formData)
                 .then(res => {
                     if (res.data.result_rows === 1) {
                         alert('상품등록 완료');
@@ -65,7 +65,7 @@ export default function AdminDesc() {
                             <AdminProductUploadMulti getFileName={getFileName} />
                         </li>
                         {previewList && previewList.map((preview) =>
-                            <img src={`http://localhost:9000/${preview}`} alt="미리보기" style={{ 'width': '200px' }} />
+                            <img src={`http://3.36.132.223:9000/${preview}`} alt="미리보기" style={{ 'width': '200px' }} />
                         )}
                         <li>
                             <input type="hidden" name='uploadFile' value={fnames.uploadFileName} />

@@ -50,7 +50,7 @@ export default function MainProductBlock({ bestList, className }) {
             : [...wishList, pid];
 
         try {
-            await axios.post("http://localhost:9000/mypage/updateWishList", {
+            await axios.post("http://3.36.132.223:9000/mypage/updateWishList", {
                 id,
                 newWishList: newWish,
             });
@@ -92,7 +92,7 @@ export default function MainProductBlock({ bestList, className }) {
                             <Link to={`/product/detail/${item.pid}`} className={`${className}-block`}>
                                 <li className={`${className}-li`}>
                                     <img className={`${className}-img`}
-                                        src={`http://localhost:9000/${item.main_image}`}
+                                        src={`http://3.36.132.223:9000/${item.main_image}`}
                                         alt="" />
                                     <div className={`${className}-detail`}>
                                         <p className={`${className}-detail-title`}>{item.pname}</p>

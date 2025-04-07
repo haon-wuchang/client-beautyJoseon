@@ -8,7 +8,7 @@ export default function MainBestProducts() {
     const [bestList, setBestList] = useState([]);
 
     useEffect(() => {
-        axios.post("http://localhost:9000/main/bestItem")
+        axios.post("http://3.36.132.223:9000/main/bestItem")
                     .then(res => setBestList(res.data))
                     .catch(err => console.log(err));
     }, []);

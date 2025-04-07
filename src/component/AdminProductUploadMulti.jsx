@@ -13,7 +13,7 @@ export default function AdminProductUploadMulti({getFileName}) {
             formData.append('files', file);
         }
         formData.append ( 'oldFiles',oldFile ) ;  // 
-        axios.post(`http://localhost:9000/uploads/multiple?maxFiles=${files.length}`, formData, {
+        axios.post(`http://3.36.132.223:9000/uploads/multiple?maxFiles=${files.length}`, formData, {
             headers: { "Content-Type": "multipart/form-data" },
         })
             .then(res => {

@@ -11,7 +11,7 @@ export default function AdminProductUpload({getFileName}) {
         formData.append('file',e.target.files[0]); 
         formData.append('oldFile',oldFile); 
         
-        axios.post('http://localhost:9000/uploads',formData,{
+        axios.post('http://3.36.132.223:9000/uploads',formData,{
             headers :{ 'Content-Type':'multipart/form-data'},             
             })
             .then(res => {console.log('이미지서버전송결과',res.data)
